@@ -1,0 +1,46 @@
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label for="taskStatus" class="h4 mb-3"
+              >{{ mode === "edit" ? "Edit" : "Add" }} task status</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              name="taskStatus"
+              id="taskStatus"
+              formControlName="taskStatus"
+            />
+          </div>
+          <button
+            class="btn btn-primary"
+            [disabled]="!this.form.valid"
+            type="submit"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="mb-3">Task Status</h4>
+        <div class="card" style="width: 18rem">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let st of status">
+              {{st.status}}
+              <a class="float-end" (click)="onEdit(st.id, st.status)" style="cursor: pointer"
+                >Edit</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

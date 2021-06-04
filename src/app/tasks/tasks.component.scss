@@ -1,0 +1,16 @@
+.task-row {
+  overflow-x: auto;
+  height: 100%;
+  .task-col {
+    width: 250px;
+    .tasks {
+      overflow: auto;
+      .card {
+        margin-bottom: 0.25rem;
+        &-body {
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+}

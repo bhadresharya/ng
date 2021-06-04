@@ -1,0 +1,42 @@
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <div class="card bg-light shadow">
+      <div class="card-body" *ngFor="let task of task">
+        <a class="btn btn-link float-end" (click)="onEditTask()">Edit Task</a>
+        <span class="badge small bg-primary">{{ task.status }}</span>
+        <h4>
+          Task Title: {{ task.title }}
+        </h4>
+        <p>
+          <span *ngIf="task.description">{{ task.description }}</span>
+          <span *ngIf="!task.description"
+            ><em>No Description available</em></span
+          >
+        </p>
+        <form [formGroup]='form' (ngSubmit)="onStatusChange()">
+          <div class="row">
+            <div class="col-md-4">
+              <label for="">Change Status</label>
+            </div>
+            <div class="col-md-5">
+              <select
+                name="status"
+                id="status"
+                class="form-control"
+                formControlName="status"
+              >
+              <option value="" hidden>Change Status</option>
+                <option *ngFor="let st of status" [value]="st.status">
+                  {{ st.status }}
+                </option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <button class="btn btn-primary" type="submit" [disabled]="!this.form.valid">Change Status</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

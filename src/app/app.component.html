@@ -1,1 +1,8 @@
-<h1>Hello {{title | uppercase}}</h1>
+<main class="vh-100 d-flex flex-column">
+  <app-header></app-header>
+  <section>
+    <div class="container-fluid pt-3">
+      <router-outlet></router-outlet>
+    </div>
+  </section>
+</main>
