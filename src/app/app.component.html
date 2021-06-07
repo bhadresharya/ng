@@ -1,6 +1,9 @@
 <div class="container">
-  <app-cockpit (serverCreated)="onServerAdded($event)" (blueprintCreated)="onBlueprintAdded($event)"></app-cockpit>
+  <app-cockpit (serverCreated)="onServerAdded($event)" (serverTested)="onServerTested($event)" (blueprintCreated)="onBlueprintAdded($event)"></app-cockpit>
   <hr />
+  <app-test (outputData)="onOutputData($event)"></app-test>
+  <p *ngFor="let p of parentArray">{{p.name}}</p>
+  <hr>
   <div class="row">
     <div class="col-xs-12">
       <app-server-element
