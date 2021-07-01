@@ -9,9 +9,9 @@ export class AppComponent {
   serverElements = [
     { type: 'server', name: 'Testserver', content: 'This is a test server.' },
   ];
-  parentArray = [
-    {name: 'initial test'}
-  ]
+  test = [
+    {name: 'test'}
+  ];
 
   onServerAdded(serverData: { serverName: string; serverContent: string }) {
     this.serverElements.push({
@@ -21,12 +21,10 @@ export class AppComponent {
     });
   }
 
-  onServerTested(serverData: { serverName: string; serverContent: string }) {
-    this.serverElements.push({
-      type: 'server',
-      name: serverData.serverName,
-      content: serverData.serverContent,
-    });
+  onTest(testData: {name: string}) {
+    this.test.push({
+      name: testData.name
+    })
   }
 
   onBlueprintAdded(blueprintData: { serverName: string; serverContent: string }) {
@@ -37,10 +35,4 @@ export class AppComponent {
     });
   }
 
-  onOutputData(outputData: {name: string}) {
-    this.parentArray.push({
-      name: outputData.name
-    })
-
-  }
 }

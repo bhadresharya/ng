@@ -6,14 +6,14 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./test.component.scss']
 })
 export class TestComponent implements OnInit {
-  @Output() outputData = new EventEmitter<{name: string}>()
+  @Output() outputData = new EventEmitter<{name:string}>()
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onOutputData() {
+  onTest() {
     this.outputData.emit({
       name: 'test'
     })
