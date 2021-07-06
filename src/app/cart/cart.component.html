@@ -1,0 +1,52 @@
+<div class="row">
+    <div class="col-md-8">
+        <table class="table table-bordered">
+            <tr>
+                <th>Id</th>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Qty</th>
+                <th>Total</th>
+            </tr>
+            <tr *ngFor="let pizza of pizza">
+                <td>{{pizza.id}}</td>
+                <td><img [src]="'../../assets/images/' + pizza.image" class="img-item" alt=""></td>
+                <td>{{pizza.name}}</td>
+                <td>{{pizza.price}}</td>
+                <td>
+                    <div class="input-group">
+                        <button class="btn btn-outline-secondary btn-sm"
+                            (click)="changeQty(pizza, 'decrease')">-</button>
+                        <input type="number" class="form-control form-control-sm text-center" style="max-width: 50px;"
+                            [(ngModel)]="pizza.qty">
+                        <button class="btn btn-outline-secondary btn-sm"
+                            (click)="changeQty(pizza, 'increase')">+</button>
+                    </div>
+                </td>
+                <td>{{pizza.price * pizza.qty}}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-md-4">
+        <div class="card bg-primary text-white">
+            <div class="card-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="address">Address</label>
+                        <textarea id="address" class="form-control"></textarea>
+                    </div>
+                    <div class="d-flex justify-content-between text-white mb-3">
+                        <span>Total</span>
+                        <span>{{total | currency: 'INR'}}</span>
+                    </div>
+                </form>
+                <button class="btn btn-light float-end">Checkout</button>
+            </div>
+        </div>
+    </div>
+</div>
