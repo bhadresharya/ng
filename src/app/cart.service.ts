@@ -18,6 +18,8 @@ export class CartService {
     } else {
       alert('Item already added to cart');
     }
+    console.log(this.products);
+    
   }
 
   getProducts() {

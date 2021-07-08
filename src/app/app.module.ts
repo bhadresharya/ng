@@ -7,15 +7,13 @@ import { ProductsComponent } from './products/products.component';
 import { HeaderComponent } from './header/header.component';
 import { CartComponent } from './cart/cart.component';
 import { FormsModule } from '@angular/forms';
-import { OrdersComponent } from './orders/orders.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductsComponent,
     HeaderComponent,
-    CartComponent,
-    OrdersComponent
+    CartComponent
   ],
   imports: [
     FormsModule,

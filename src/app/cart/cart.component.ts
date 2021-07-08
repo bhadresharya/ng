@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { CartService } from '../cart.service';
+import {Modal} from 'bootstrap';
 
 @Component({
   selector: 'app-cart',
@@ -7,7 +8,10 @@ import { CartService } from '../cart.service';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
-  pizza = this.cartService.getProducts();
+  @ViewChild('exampleModal', { static: true }) modalEl;
+  modal: any;
+  pizza;
+  emptyCart;
   total: number;
 
   constructor(
@@ -15,21 +19,26 @@ export class CartComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.pizza = this.cartService.getProducts();
+    this.emptyCart = this.pizza.length === 0;
     this.calculateCart();
   }
 
   calculateCart() {
-
     this.total = this.pizza.reduce((n, { price, qty }) => n + (price * qty), 0)
   }
 
   changeQty(product, mode) {
     if (mode === 'decrease' && product.qty > 1) {
       product.qty--;
-    } else if(mode === 'increase') {
+    } else if (mode === 'increase') {
       product.qty++;
     }
     this.calculateCart();
+  }
+
+  onCheckout(event) {
+    alert("Your order placed successfully")
   }
 
 }
