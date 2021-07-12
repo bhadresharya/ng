@@ -1,1 +1,9 @@
-<h1>Hello {{title | uppercase}}</h1>
+<div class="container mt-5">
+    <div class="mb-3">
+        <button class="btn btn-primary me-2" routerLink="a">Module A</button>
+        <button class="btn btn-primary me-2" routerLink="b">Module B</button>
+        <button class="btn btn-primary" routerLink="c">Module C</button>
+    </div>
+    <hr>
+    <router-outlet></router-outlet>
+</div>
