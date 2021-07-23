@@ -1,0 +1,16 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+
+
+$theme-colors: (
+    "primary": $purple,
+);
+
+$link-color: $body-color;
+$nav-link-color: $link-color;
+$nav-link-hover-color: $link-color;
+$link-decoration: none;
+
+$enable-caret: false;
+$enable-shadows: true;
+$enable-gradients: true;

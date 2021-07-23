@@ -1,0 +1,16 @@
+@import '../../../assets/variables';
+
+.sidebar {
+    width: 200px;
+    border-right: 1px solid $border-color;
+    .nav-link {
+        display: flex;
+        &:hover, &.active {
+            background: $purple-100;
+        }
+        .nav-icon {
+            width: 30px;
+            display: block;
+        }
+    }
+}
