@@ -37,19 +37,18 @@ html {
 .page-header {
     display: flex;
     align-items: center;
-    font-size: 18px;
-    font-weight: 500;
     @extend .px-3;
     @extend .py-2;
     @extend .border-bottom;
     &-btn {
         border: 0;
         background: transparent;
-        padding: 0;
         margin-right: 1rem;
+        font-size: 16px;
     }
     &-text {
-
+        font-size: 18px;
+        font-weight: 500;
     }
     &-action {
         margin-left: auto
