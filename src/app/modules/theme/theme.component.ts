@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare var $:any;
 
 @Component({
   selector: 'app-theme',
@@ -10,6 +11,10 @@ export class ThemeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleSidebar() {
+    $('.sidebar').toggleClass('sidebar-collapsed');
   }
 
 }
