@@ -7,6 +7,8 @@ import { ButtonsComponent } from './buttons/buttons.component';
 import { TypographyComponent } from './typography/typography.component';
 import { ChartsComponent } from './charts/charts.component';
 import { LineChartComponent } from './charts/line-chart/line-chart.component';
+import { BookingsComponent } from './bookings/bookings.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { LineChartComponent } from './charts/line-chart/line-chart.component';
     ButtonsComponent,
     TypographyComponent,
     ChartsComponent,
-    LineChartComponent
+    LineChartComponent,
+    BookingsComponent,
+    DashboardComponent
   ],
   imports: [
     CommonModule,

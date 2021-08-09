@@ -36,21 +36,29 @@ html {
   }
 }
 
+// layout
 .wrapper {
   display: flex;
   width: 100%;
   height: 100vh;
 
   .sidebar {
-    width: 200px;
+    width: 230px;
     height: 100%;
     border-right: 1px solid $border-color;
     transition: 0.3s all;
     overflow-x: hidden;
     .nav-link {
       display: flex;
+
       .nav-text {
         transition: 0.2s all;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      .dropdown-chevron {
+        transition: 0.2s all;
+        margin-left: auto;
       }
       &:hover,
       &.active {
@@ -59,6 +67,19 @@ html {
       .nav-icon {
         width: 30px;
         display: block;
+      }
+    }
+    .has-treeview {
+      .nav-link {
+        &[aria-expanded="true"] {
+          .dropdown-chevron {
+            transform: rotate(90deg);
+          }
+        }
+      }
+      .nav {
+        padding-left: 0.75rem;
+        transition: 0.3s all;
       }
     }
     .logo {
@@ -71,6 +92,27 @@ html {
     }
     &.sidebar-collapsed {
       width: 45px;
+      &:hover {
+        width: 230px;
+        .nav-text {
+          opacity: 1;
+        }
+        .logo {
+          img {
+            transform: translateX(0);
+          }
+        }
+        .has-treeview {
+          .nav {
+            padding-left: 0.75rem;
+          }
+        }
+      }
+      .has-treeview {
+        .nav {
+          padding-left: 0;
+        }
+      }
       .nav-text {
         opacity: 0;
       }
@@ -93,11 +135,18 @@ html {
         }
       }
       &.sidebar-collapsed {
-          .logo {
-              img {
-                transform: translateX(0);
-              }
+        .logo {
+          img {
+            transform: translateX(0);
           }
+        }
+      }
+      &.sidebar-hovered {
+        .logo {
+          img {
+            transform: translateX(-150px);
+          }
+        }
       }
       .user-dropdown {
         height: 32px;
@@ -138,6 +187,55 @@ html {
     .page-container {
       @extend .container-fluid;
       padding: 3rem;
+    }
+  }
+}
+
+// space
+.seat-label {
+  display: flex;
+  justify-content: center;
+  grid-gap: 1.5rem;
+  div {
+    display: flex;
+    align-items: center;
+    grid-gap: 0.25rem;
+    span {
+      display: inline-flex;
+      height: 20px;
+      width: 20px;
+      &.opacity-50 {
+          opacity: .5;
+      }
+    }
+  }
+}
+.space {
+  .cubicals {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 0.5rem;
+    .seat {
+      height: 36px;
+      width: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $secondary;
+      &.vecant {
+        &:hover {
+          background: rgba($primary,.75);
+          color: $white;
+        }
+      }
+      &.occupied {
+        background: $primary;
+        color: $white;
+      }
+      &.blocked {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
     }
   }
 }

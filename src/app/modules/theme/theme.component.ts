@@ -17,4 +17,8 @@ export class ThemeComponent implements OnInit {
     $('.sidebar, header').toggleClass('sidebar-collapsed');
   }
 
+  hoverSidebar() {
+    $('header.sidebar-collapsed').toggleClass('sidebar-hovered')
+  }
+
 }

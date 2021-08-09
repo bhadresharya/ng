@@ -1,11 +1,11 @@
 <div class="wrapper">
-    <div class="sidebar">
+    <div class="sidebar" (mouseenter)="hoverSidebar()" (mouseleave)="hoverSidebar()">
         <div class="logo">
             <img src="./assets/images/mSpace.png" alt="">
         </div>
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                <a class="nav-link" routerLink="dashboard" routerLinkActive="active">
                     <span class="nav-icon">
                         <i class="fas fa-tachometer-alt"></i>
                     </span>
@@ -15,69 +15,84 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="charts" routerLinkActive="active">
+                <a class="nav-link" routerLink="bookings" routerLinkActive="active">
                     <span class="nav-icon">
-                        <i class="fas fa-chart-pie"></i>
+                        <i class="fas fa-chair"></i>
                     </span>
                     <span class="nav-text">
-                        Charts
-                    </span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="typography" routerLinkActive="active">
-                    <span class="nav-icon">
-                        <i class="fas fa-heading"></i>
-                    </span>
-                    <span class="nav-text">
-                        Typography
+                        Bookings
                     </span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link">
                     <span class="nav-icon">
-                        <i class="fas fa-icons"></i>
+                        <i class="fas fa-file-medical"></i>
                     </span>
                     <span class="nav-text">
-                        Icons
+                        Health Declaration
                     </span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="buttons" routerLinkActive="active">
+            <li class="nav-item has-treeview">
+                <a class="nav-link" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                     <span class="nav-icon">
-                        <i class="fas fa-hand-pointer"></i>
+                        <i class="fas fa-user-shield"></i>
                     </span>
                     <span class="nav-text">
-                        Buttons
+                        Admin Dashboard
+                    </span>
+                    <span class="dropdown-chevron">
+                        <i class="fas fa-chevron-right"></i>
                     </span>
                 </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link">
-                    <span class="nav-icon">
-                        <i class="fas fa-i-cursor"></i>
-                    </span>
-                    <span class="nav-text">
-                        Forms
-                    </span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link">
-                    <span class="nav-icon">
-                        <i class="fas fa-window-maximize"></i>
-                    </span>
-                    <span class="nav-text">
-                        Modals
-                    </span>
-                </a>
+                <ul class="nav flex-column flex-nowrap collapse" id="collapseExample">
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <span class="nav-icon">
+                                <i class="fas fa-users"></i>
+                            </span>
+                            <span class="nav-text">
+                                Book Seats
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <span class="nav-icon">
+                                <i class="fas fa-hand-holding"></i>
+                            </span>
+                            <span class="nav-text">
+                                Allocate Seats
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <span class="nav-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </span>
+                            <span class="nav-text">
+                                Seating Reports
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <span class="nav-icon">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                            <span class="nav-text">
+                                Block/Release Seats
+                            </span>
+                        </a>
+                    </li>
+                </ul>
             </li>
         </ul>
     </div>
     <main class="main">
-        <header>
+        <header class="">
             <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
                 <div class="container-fluid">
                     <button class="btn btn-link text-white" (click)="toggleSidebar()">
@@ -93,12 +108,24 @@
                                 B
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li class="mx-3">
+                                    <strong>Bhadresh Arya</strong>
+                                </li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item">
+                                    <span class="me-2">
+                                        <i class="fas fa-user"></i>
+                                    </span>
+                                    Profile
+                                </a></li>
+                                <li><a class="dropdown-item">
+                                    <span class="me-2">
+                                        <i class="fas fa-sign-out-alt"></i>
+                                    </span>
+                                    Logout
+                                </a></li>
                             </ul>
                         </li>
                     </ul>
