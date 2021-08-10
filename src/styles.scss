@@ -36,6 +36,23 @@ html {
   }
 }
 
+// login
+.login-page {
+  @extend .bg-gradient;
+  background-color: $primary;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  .logo {
+    margin-bottom: 1rem;
+    text-align: center;
+    img {
+      max-height: 28px;
+    }
+  }
+}
+
 // layout
 .wrapper {
   display: flex;
@@ -204,8 +221,8 @@ html {
       display: inline-flex;
       height: 20px;
       width: 20px;
-      &.opacity-50 {
-          opacity: .5;
+      &.opacity-75 {
+        opacity: 0.75;
       }
     }
   }
@@ -221,11 +238,12 @@ html {
       display: flex;
       align-items: center;
       justify-content: center;
-      background: $secondary;
       &.vecant {
+        cursor: pointer;
+        background: rgba($primary, 0.75);
+        color: $white;
         &:hover {
-          background: rgba($primary,.75);
-          color: $white;
+          background: $primary;
         }
       }
       &.occupied {
@@ -233,7 +251,8 @@ html {
         color: $white;
       }
       &.blocked {
-        opacity: 0.5;
+        background: $secondary;
+        opacity: 0.75;
         cursor: not-allowed;
       }
     }
