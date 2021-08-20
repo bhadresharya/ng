@@ -1,0 +1,18 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+
+$theme-colors: (
+    "primary": $purple,
+);
+
+$enable-caret: false;
+$enable-rounded: true;
+$enable-shadows: true;
+$enable-gradients: true;
+
+$box-shadow: 0 0 1rem rgba($black, .15);
+
+$body-color: $gray-600;
+
+$link-color: $gray-600;
+$nav-link-color: $link-color;

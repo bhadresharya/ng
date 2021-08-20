@@ -1,0 +1,16 @@
+@import "../../../../assets/variables";
+
+.search-form {
+    position: relative;
+    display: flex;
+  .form-control {
+    box-shadow: $box-shadow;
+    border: 0;
+  }
+  .btn {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+  }
+}
