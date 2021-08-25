@@ -1,0 +1,15 @@
+@import '../../../../../assets/variables';
+
+.happenings {
+  padding-bottom: 2rem;
+  &-img {
+    display: flex;
+    grid-gap: 2rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+    img {
+        box-shadow: $box-shadow;
+        border-radius: $border-radius-xl;
+    }
+  }
+}

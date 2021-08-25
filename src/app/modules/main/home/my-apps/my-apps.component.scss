@@ -1,0 +1,23 @@
+@import "../../../../../assets/variables";
+
+.my-apps {
+  display: flex;
+  grid-gap: 2rem;
+  overflow-x: auto;
+  .app {
+      text-align: center;
+    &-card {
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: inset $box-shadow;
+      border-radius: $border-radius-xl;
+      background-color: $white;
+      margin-bottom: 0.5rem;
+      img {
+        max-height: 36px;
+      }
+    }
+  }
+}
