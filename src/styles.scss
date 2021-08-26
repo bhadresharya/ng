@@ -37,6 +37,8 @@ body {
 }
 
 .sidebar {
+  display: flex;
+  flex-direction: column;
   width: 210px;
   padding: 1rem;
   overflow-y: auto;
