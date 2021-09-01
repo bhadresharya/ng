@@ -1,0 +1,8 @@
+<div class="page-header">
+    <button class="btn" (click)="goBack()">
+        <i class="fas fa-arrow-left"></i>
+    </button>
+    <h4>{{pdfName}}</h4>
+</div>
+<pdf-viewer [src]="pdfPath" [original-size]="false" [render-text]='true' [show-all]="true"
+    style="display: block; height: fit-content;" [fit-to-page]="true"></pdf-viewer>

@@ -18,7 +18,7 @@ const routes: Routes = [
       },
       {
         path: 'hr-policies',
-        loadChildren: ()=> import('./hr-policies/hr-policies.module').then(m=> m.HrPoliciesModule)
+        loadChildren: () => import('./hr-policies/hr-policies.module').then(m => m.HrPoliciesModule)
       },
       {
         path: 'apps',
@@ -31,6 +31,10 @@ const routes: Routes = [
       {
         path: 'fellow-martians',
         loadChildren: () => import('./fellow-martians/fellow-martians.module').then(m => m.FellowMartiansModule)
+      },
+      {
+        path: 'goals-careers',
+        loadChildren: () => import('./goals-careers/goals-careers.module').then(m => m.GoalsCareersModule)
       }
     ]
   },
