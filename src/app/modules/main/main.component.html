@@ -1,6 +1,137 @@
-<app-header></app-header>
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid px-4">
+        <a class="navbar-brand">
+            <img src="./assets/images/mcafe.png" class="img-fluid" alt="">
+        </a>
+        <div class="logo-separator"></div>
+        <a class="navbar-brand">
+            <img src="./assets/images/marlabs.png" class="img-fluid" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="search-form ms-auto">
+                <input type="text" class="form-control" placeholder="Search">
+                <button class="btn" type="button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <ul class="navbar-nav ms-3">
+                <li class="nav-item">
+                    <a class="nav-link">
+                        <i class="far fa-bell"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 <main class="main">
-    <app-sidebar></app-sidebar>
+    <div class="sidebar">
+        <ul class="nav flex-column mb-3">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/">
+                    <span class="nav-icon">
+                        <i class="fas fa-home"></i>
+                    </span>
+                    Home
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="welcome-aboard">
+                    <span class="nav-icon">
+                        <i class="fas fa-praying-hands"></i>
+                    </span>
+                    Welcome Aboard
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="hr-policies">
+                    <span class="nav-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </span>
+                    HR Policies
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="apps">
+                    <span class="nav-icon">
+                        <i class="fas fa-th-large"></i>
+                    </span>
+                    Apps
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="fellow-martians">
+                    <span class="nav-icon">
+                        <i class="fas fa-users"></i>
+                    </span>
+                    Fellow Martians
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="policies">
+                    <span class="nav-icon">
+                        <i class="fas fa-copy"></i>
+                    </span>
+                    Policies by Function
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">
+                    <span class="nav-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </span>
+                    Others
+                </a>
+            </li>
+        </ul>
+        <div class="card bg-success text-white mb-3">
+            <div class="card-body">
+                <p class="mb-2 text-uppercase"><strong>Learning at Marlabs</strong></p>
+                <p class="mb-0">An initiative aimed at
+                    encouraging every Martian
+                    adopt continuous learning</p>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-body">
+                <p class="mb-2 text-uppercase"><strong>Job Referral</strong></p>
+                <p class="mb-0">Click to know about
+                    employee referral bonus
+                    and referral policies</p>
+            </div>
+        </div>
+        <ul class="nav justify-content-center fs-5 mt-auto">
+            <li class="nav-item">
+                <a class="nav-link">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">
+                    <i class="fab fa-twitter-square"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
     <div class="wrapper">
         <router-outlet></router-outlet>
     </div>

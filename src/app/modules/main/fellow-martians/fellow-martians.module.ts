@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { FellowMartiansRoutingModule } from './fellow-martians-routing.module';
 import { FellowMartiansComponent } from './fellow-martians.component';
+import { MartianDetailsComponent } from './martian-details/martian-details.component';
 
 
 @NgModule({
   declarations: [
-    FellowMartiansComponent
+    FellowMartiansComponent,
+    MartianDetailsComponent
   ],
   imports: [
     CommonModule,

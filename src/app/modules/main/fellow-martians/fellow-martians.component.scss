@@ -1,0 +1,18 @@
+@import '../../../../assets/variables';
+
+.card {
+    box-shadow: $box-shadow;
+    &-body {
+        display: flex;
+        align-items: center;
+        grid-gap: 1rem;
+    }
+    &-img {
+        width: 80px;
+        min-width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: $box-shadow;
+    }
+}

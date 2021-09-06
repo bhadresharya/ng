@@ -40,6 +40,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 210px;
+  min-width: 210px;
   padding: 1rem;
   overflow-y: auto;
   height: calc(100% - 60px);
@@ -145,5 +146,27 @@ body {
   }
   th, td {
     @extend .align-middle;
+  }
+}
+
+.logo-separator {
+  height: 25px;
+  width: 1px;
+  background-color: $gray-300;
+  margin-left: 1rem;
+  margin-right: 2rem;
+}
+.search-form {
+    position: relative;
+    display: flex;
+  .form-control {
+    box-shadow: $box-shadow;
+    border: 0;
+  }
+  .btn {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
   }
 }
