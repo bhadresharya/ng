@@ -8,17 +8,38 @@
     <table class="table">
         <thead class="table-dark">
             <tr>
-                <td colspan="2">Key Result Areas</td>
+                <td width="10%">Key Result Areas</td>
                 <td>Specific results / Goals to be achieved</td>
-                <td>Details of the Activities involved</td>
-                <td>Measures of Performance </td>
+                <td width="30%">Details of the Activities involved</td>
+                <td width="30%">Measures of Performance </td>
                 <td>Weightage</td>
             </tr>
         </thead>
         <tbody>
+            <ng-container *ngFor="let r of rolesKra">
+                <tr *ngFor="let s of r.data">
+                    <td>
+                        {{s.keyResults}}
+                    </td>
+                    <td>
+                        {{s.specificGoals}}
+                    </td>
+                    <td>
+                        {{s.activities}}
+                    </td>
+                    <td>
+                        {{s.measures}}
+                    </td>
+                    <td>
+                        {{s.weightage}}
+                    </td>
+                </tr>
+            </ng-container>
+        </tbody>
+
+        <!-- <tbody>
             <tr>
-                <td>I</td>
-                <td>Professional excellence</td>
+                <td>I. Professional excellence</td>
                 <td>Development of competencies basis the requirements of the role<br>
                     <br>
                     Enhancing one's professional capability and role productivity (contribution)
@@ -41,8 +62,7 @@
                 <td>10%</td>
             </tr>
             <tr>
-                <td>II</td>
-                <td>Role excellence - Individual contribution </td>
+                <td>II. Role excellence - Individual contribution </td>
                 <td>a. Ensuring on time delivery of tasks and modules <br>
                     b. Ensuring quality output<br>
                     c. Enhancing personal productivity<br>
@@ -71,8 +91,7 @@
                 <td>40%</td>
             </tr>
             <tr>
-                <td>III</td>
-                <td>Role excellence - Technological Guidance</td>
+                <td>III. Role excellence - Technological Guidance</td>
                 <td>1. Ensuring quality output from the team <br>
                     2. Enhancing the technology prowess of the project and ensuring risk-free execution<br>
                     3. Enhancing C-SAT<br>
@@ -95,8 +114,7 @@
                 <td>35%</td>
             </tr>
             <tr>
-                <td>IV</td>
-                <td>Project / Process / organizational excellence</td>
+                <td>IV. Project / Process / organizational excellence</td>
                 <td>1. Project performance enhancement<br>
                     <br>
                     2. Process improvements achieved; <br>
@@ -122,6 +140,6 @@
                 </td>
                 <td>15%</td>
             </tr>
-        </tbody>
+        </tbody> -->
     </table>
 </div>

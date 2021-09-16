@@ -27,6 +27,7 @@ body {
   height: 100vh;
   overflow: hidden;
 }
+
 .navbar {
   height: 60px;
   .navbar-brand {
@@ -34,9 +35,31 @@ body {
       max-height: 36px;
     }
   }
+  .logo-separator {
+    height: 25px;
+    width: 1px;
+    background-color: $gray-300;
+    margin-left: 1rem;
+    margin-right: 2rem;
+  }
+  .search-form {
+    position: relative;
+    display: flex;
+    .form-control {
+      box-shadow: $box-shadow;
+      border: 0;
+    }
+    .btn {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+    }
+  }
 }
 
 .sidebar {
+  // position: relative;
   display: flex;
   flex-direction: column;
   width: 210px;
@@ -58,6 +81,28 @@ body {
       &:hover {
         background-color: $gray-500;
       }
+    }
+  }
+  .submenu {
+    position: absolute;
+    top: 60px;
+    left: calc(210px - 1rem);
+    background: #fff;
+    z-index: 999;
+    height: calc(100% - 60px);
+    width: 0;
+    transition: 0.3s all;
+    transition-delay: 0.3s;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 1rem 0;
+    &.show {
+      width: 210px;
+      padding: 1rem;
+    }
+    .nav-link {
+      white-space: nowrap;
+      color: $dark;
     }
   }
   .nav {
@@ -100,10 +145,22 @@ body {
       }
     }
     .main-carousel {
+      margin-bottom: 3rem;
       box-shadow: $box-shadow;
       border-radius: 25px;
-      overflow: hidden;
-      margin-bottom: 2rem;
+      .carousel-img {
+        border-radius: 25px;
+        overflow: hidden;
+      }
+      .carousel-indicators {
+        bottom: -55px;
+        button {
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          box-shadow: inset $box-shadow;
+        }
+      }
     }
   }
 }
@@ -142,31 +199,10 @@ body {
 .table {
   @extend .table-bordered;
   th {
-    text-align: center
+    text-align: center;
   }
-  th, td {
+  th,
+  td {
     @extend .align-middle;
-  }
-}
-
-.logo-separator {
-  height: 25px;
-  width: 1px;
-  background-color: $gray-300;
-  margin-left: 1rem;
-  margin-right: 2rem;
-}
-.search-form {
-    position: relative;
-    display: flex;
-  .form-control {
-    box-shadow: $box-shadow;
-    border: 0;
-  }
-  .btn {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
   }
 }

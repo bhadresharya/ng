@@ -55,13 +55,264 @@
                     HR Policies
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="apps">
+            <li class="nav-item" id="apps" (mouseenter)="openSubmenu('apps')" (mouseleave)="openSubmenu('apps')">
+                <a class="nav-link">
                     <span class="nav-icon">
                         <i class="fas fa-th-large"></i>
                     </span>
                     Apps
                 </a>
+                <div class="submenu">
+                    <ul class="nav flex-column mb-3">
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="collapse" href="#global" role="button"
+                                aria-expanded="false" aria-controls="global">
+                                <span class="nav-icon">
+                                    <i class="fas fa-globe"></i>
+                                </span>
+                                Global
+                            </a>
+                            <div class="collapse" id="global">
+                                <ul class="nav flex-column mb-3 ps-4">
+                                    <li class="nav-item">
+                                        <a class="nav-link">
+                                            <span class="nav-icon">
+                                                <i class="fas fa-th-large"></i>
+                                            </span>
+                                            mTnE
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link">
+                                            <span class="nav-icon">
+                                                <i class="fas fa-th-large"></i>
+                                            </span>
+                                            mVendor
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link">
+                                            <span class="nav-icon">
+                                                <i class="fas fa-th-large"></i>
+                                            </span>
+                                            mDesk
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link">
+                                            <span class="nav-icon">
+                                                <i class="fas fa-th-large"></i>
+                                            </span>
+                                            Careers
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link">
+                                            <span class="nav-icon">
+                                                <i class="fas fa-th-large"></i>
+                                            </span>
+                                            Yammer
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link">
+                                            <span class="nav-icon">
+                                                <i class="fas fa-th-large"></i>
+                                            </span>
+                                            mTalent
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link">
+                                            <span class="nav-icon">
+                                                <i class="fas fa-th-large"></i>
+                                            </span>
+                                            mFinance
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link">
+                                            <span class="nav-icon">
+                                                <i class="fas fa-th-large"></i>
+                                            </span>
+                                            mSales
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link">
+                                            <span class="nav-icon">
+                                                <i class="fas fa-th-large"></i>
+                                            </span>
+                                            mView
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link">
+                                            <span class="nav-icon">
+                                                <i class="fas fa-th-large"></i>
+                                            </span>
+                                            QMS
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link">
+                                            <span class="nav-icon">
+                                                <i class="fas fa-th-large"></i>
+                                            </span>
+                                            mTime
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link">
+                                            <span class="nav-icon">
+                                                <i class="fas fa-th-large"></i>
+                                            </span>
+                                            mContract
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="collapse" href="#india" role="button"
+                                aria-expanded="false" aria-controls="india">
+                                <span class="nav-icon">
+                                    <i class="fas fa-globe"></i>
+                                </span>
+                                India
+                            </a>
+                            <div class="collapse" id="india">
+                                <ul class="nav flex-column mb-3 ps-4">
+                                    <li class="nav-item">
+                                        <a class="nav-link">
+                                            <span class="nav-icon">
+                                                <i class="fas fa-th-large"></i>
+                                            </span>
+                                            Axis Bank
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link">
+                                            <span class="nav-icon">
+                                                <i class="fas fa-th-large"></i>
+                                            </span>
+                                            Medical Insurance
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link">
+                                            <span class="nav-icon">
+                                                <i class="fas fa-th-large"></i>
+                                            </span>
+                                            Payroll
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link">
+                                            <span class="nav-icon">
+                                                <i class="fas fa-th-large"></i>
+                                            </span>
+                                            ET - Payroll
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link">
+                                            <span class="nav-icon">
+                                                <i class="fas fa-th-large"></i>
+                                            </span>
+                                            mFleet
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link">
+                                            <span class="nav-icon">
+                                                <i class="fas fa-th-large"></i>
+                                            </span>
+                                            mVisitor
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link">
+                                            <span class="nav-icon">
+                                                <i class="fas fa-th-large"></i>
+                                            </span>
+                                            Internal Jobs
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="collapse" href="#us" role="button"
+                                aria-expanded="false" aria-controls="us">
+                                <span class="nav-icon">
+                                    <i class="fas fa-globe"></i>
+                                </span>
+                                US
+                            </a>
+                            <div class="collapse" id="us">
+                                <ul class="nav flex-column mb-3 ps-4">
+                                    <li class="nav-item">
+                                        <a class="nav-link">
+                                            <span class="nav-icon">
+                                                <i class="fas fa-th-large"></i>
+                                            </span>
+                                            HR Web
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link">
+                                            <span class="nav-icon">
+                                                <i class="fas fa-th-large"></i>
+                                            </span>
+                                            Payroll
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link">
+                                            <span class="nav-icon">
+                                                <i class="fas fa-th-large"></i>
+                                            </span>
+                                            Dental Insurance
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link">
+                                            <span class="nav-icon">
+                                                <i class="fas fa-th-large"></i>
+                                            </span>
+                                            Medical Insurance
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link">
+                                            <span class="nav-icon">
+                                                <i class="fas fa-th-large"></i>
+                                            </span>
+                                            IIS
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link">
+                                            <span class="nav-icon">
+                                                <i class="fas fa-th-large"></i>
+                                            </span>
+                                            Vision Insurance
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link">
+                                            <span class="nav-icon">
+                                                <i class="fas fa-th-large"></i>
+                                            </span>
+                                            Benefits Broker
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </li>
             <li class="nav-item">
                 <a class="nav-link" routerLink="fellow-martians">
@@ -79,13 +330,65 @@
                     Policies by Function
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" id="others" (mouseenter)="openSubmenu('others')" (mouseleave)="openSubmenu('others')">
                 <a class="nav-link">
                     <span class="nav-icon">
-                        <i class="fas fa-info-circle"></i>
+                        <i class="fas fa-th-large"></i>
                     </span>
                     Others
                 </a>
+                <div class="submenu">
+                    <ul class="nav flex-column mb-3">
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="gallery">
+                                <span class="nav-icon">
+                                    <i class="fas fa-images"></i>
+                                </span>
+                                Gallery
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="upcoming-events">
+                                <span class="nav-icon">
+                                    <i class="fas fa-calendar-plus"></i>
+                                </span>
+                                Upcoming Events
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="holidays">
+                                <span class="nav-icon">
+                                    <i class="fas fa-calendar-minus"></i>
+                                </span>
+                                Holiday List
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="quick-links">
+                                <span class="nav-icon">
+                                    <i class="fas fa-link"></i>
+                                </span>
+                                Quick Links
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="employee-directory">
+                                <span class="nav-icon">
+                                    <i class="fas fa-sitemap"></i>
+                                </span>
+                                Employee Directory
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="helpdesk">
+                                <span class="nav-icon">
+                                    <i class="fas fa-hands-helping"></i>
+                                </span>
+                                Helpdesk
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </li>
         </ul>
         <div class="card bg-success text-white mb-3">

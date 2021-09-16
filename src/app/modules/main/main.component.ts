@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare let $: any;
 
 @Component({
   selector: 'app-main',
@@ -10,6 +11,10 @@ export class MainComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  openSubmenu(id: string) {
+    $('#' + id + ' .submenu').toggleClass('show');
   }
 
 }

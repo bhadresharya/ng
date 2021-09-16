@@ -4,5 +4,7 @@
     </button>
     <h4>{{pdfName}}</h4>
 </div>
-<pdf-viewer [src]="pdfPath" [original-size]="false" [render-text]='true' [show-all]="true"
-    style="display: block; height: fit-content;" [fit-to-page]="true"></pdf-viewer>
+<div class="page-content">
+    <pdf-viewer [src]="pdfPath" [original-size]="false" [render-text]='true' [show-all]="true"
+        style="display: block; height: fit-content;" [fit-to-page]="true"></pdf-viewer>
+</div>
