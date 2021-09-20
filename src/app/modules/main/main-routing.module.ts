@@ -2,12 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { MainComponent } from './main.component';
-import { EmployeeDirectoryComponent } from './others/employee-directory/employee-directory.component';
-import { GalleryComponent } from './others/gallery/gallery.component';
-import { HelpdeskComponent } from './others/helpdesk/helpdesk.component';
-import { HolidaysComponent } from './others/holidays/holidays.component';
-import { QuickLinksComponent } from './others/quick-links/quick-links.component';
-import { UpcomingEventsComponent } from './others/upcoming-events/upcoming-events.component';
 
 const routes: Routes = [
   {
@@ -42,31 +36,9 @@ const routes: Routes = [
         path: 'goals-careers',
         loadChildren: () => import('./goals-careers/goals-careers.module').then(m => m.GoalsCareersModule)
       },
-
-
       {
-        path: 'gallery',
-        component: GalleryComponent
-      },
-      {
-        path: 'upcoming-events',
-        component: UpcomingEventsComponent
-      },
-      {
-        path: 'holidays',
-        component: HolidaysComponent
-      },
-      {
-        path: 'quick-links',
-        component: QuickLinksComponent
-      },
-      {
-        path: 'employee-directory',
-        component: EmployeeDirectoryComponent
-      },
-      {
-        path: 'helpdesk',
-        component: HelpdeskComponent
+        path: 'theme',
+        loadChildren: () => import('./theme/theme.module').then(m => m.ThemeModule)
       }
     ]
   },

@@ -5,141 +5,149 @@
     <h4>Roles and KRA</h4>
 </div>
 <div class="page-content">
-    <table class="table">
-        <thead class="table-dark">
-            <tr>
-                <td width="10%">Key Result Areas</td>
-                <td>Specific results / Goals to be achieved</td>
-                <td width="30%">Details of the Activities involved</td>
-                <td width="30%">Measures of Performance </td>
-                <td>Weightage</td>
-            </tr>
-        </thead>
-        <tbody>
-            <ng-container *ngFor="let r of rolesKra">
-                <tr *ngFor="let s of r.data">
-                    <td>
-                        {{s.keyResults}}
-                    </td>
-                    <td>
-                        {{s.specificGoals}}
-                    </td>
-                    <td>
-                        {{s.activities}}
-                    </td>
-                    <td>
-                        {{s.measures}}
-                    </td>
-                    <td>
-                        {{s.weightage}}
-                    </td>
+    <div class="table-responsive">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td width="20%">Role Title</td>
+                    <td colspan="3">Software Engineer</td>
                 </tr>
-            </ng-container>
-        </tbody>
+                <tr>
+                    <td>Career Ladder</td>
+                    <td colspan="3">Technical / Technology Stream</td>
+                </tr>
+                <tr>
+                    <td>Band</td>
+                    <td>B</td>
+                    <td width="20%">Grade</td>
+                    <td>B1</td>
+                </tr>
+                <tr>
+                    <td>Purpose of the Job</td>
+                    <td colspan="3">To execute project level such as coding, reviewing, testing etc</td>
+                </tr>
+                <tr>
+                    <td>Span of Control</td>
+                    <td colspan="3">Individual Contributor</td>
+                </tr>
+                <tr>
+                    <td>Educational Qualification</td>
+                    <td colspan="3">Bachelors degree in Engineering / Technology / Masters in Computer Applications</td>
+                </tr>
+                <tr>
+                    <td>Work Experience Profile</td>
+                    <td colspan="3">Overall industry experience range: 1 - 6 years</td>
+                </tr>
+                <tr>
+                    <td>
+                        Feeder Role
+                    </td>
+                    <td colspan="3">Associate Software Engineer - Level 2</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <ul class="nav nav-tabs mb-3" id="myTab" style="grid-gap: 1.5rem;" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="roles-tab" data-bs-toggle="tab" data-bs-target="#roles"
+                type="button" role="tab" aria-controls="roles" aria-selected="true">Role/Definition/KRAs</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="competency-tab" data-bs-toggle="tab" data-bs-target="#competency" type="button"
+                role="tab" aria-controls="competency" aria-selected="false">Competency Profile</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="guidelines-tab" data-bs-toggle="tab" data-bs-target="#guidelines" type="button"
+                role="tab" aria-controls="guidelines" aria-selected="false">Guidelines</button>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="roles" role="tabpanel" aria-labelledby="roles-tab">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead class="table-dark">
+                        <tr>
+                            <td width="10%">Key Result Areas</td>
+                            <td>Specific results / Goals to be achieved</td>
+                            <td width="30%">Details of the Activities involved</td>
+                            <td width="30%">Measures of Performance </td>
+                            <td>Weightage</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <ng-container *ngFor="let r of rolesKra">
+                            <tr *ngFor="let s of r.data">
+                                <td>
+                                    {{s.keyResults}}
+                                </td>
+                                <td>
+                                    {{s.specificGoals}}
+                                </td>
+                                <td>
+                                    {{s.activities}}
+                                </td>
+                                <td>
+                                    {{s.measures}}
+                                </td>
+                                <td>
+                                    {{s.weightage}}
+                                </td>
+                            </tr>
+                        </ng-container>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="competency" role="tabpanel" aria-labelledby="competency-tab">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead class="table-dark">
+                        <tr>
+                            <td width="10%">Key Result Areas</td>
+                            <td>Specific results / Goals to be achieved</td>
+                            <td width="30%">Details of the Activities involved</td>
+                            <td width="30%">Measures of Performance </td>
+                            <td>Weightage</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <ng-container *ngFor="let r of rolesKra">
+                            <tr *ngFor="let s of r.data">
+                                <td>
+                                    {{s.keyResults}}
+                                </td>
+                                <td>
+                                    {{s.specificGoals}}
+                                </td>
+                                <td>
+                                    {{s.activities}}
+                                </td>
+                                <td>
+                                    {{s.measures}}
+                                </td>
+                                <td>
+                                    {{s.weightage}}
+                                </td>
+                            </tr>
+                        </ng-container>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="guidelines" role="tabpanel" aria-labelledby="guidelines-tab">
+            <ul>
+                <li>Notes: These goals are arrived at based on the inputs from various sources such as job descriptions
+                    used in the industry, quality standards to be adhered to, inputs from role holders and managers,
+                    organizational growth plans</li>
+                <li>The goals and measures are not one-to-one mapping and should be read as a cluster of goals and
+                    cluster of possible measures</li>
+                <li>For each of the goals there can be one or many measures from the 'measures' cluster</li>
+                <li>Please remember to look at it only as a guideline that will help to an extent of 85 - 90 % in
+                    defining the goals for your role. To make the goal sheet 100% accurate, the role holder and the
+                    reporting manager should tailor this sheet as appropriate based on the project context and the
+                    individual role.</li>
+            </ul>
+        </div>
+    </div>
 
-        <!-- <tbody>
-            <tr>
-                <td>I. Professional excellence</td>
-                <td>Development of competencies basis the requirements of the role<br>
-                    <br>
-                    Enhancing one's professional capability and role productivity (contribution)
-                </td>
-                <td><br>
-                    <br>
-                    a. Pursuing competency development programs to keep oneself abreast in his / her technology area of
-                    work. <br>
-                    <br>
-                    b. Investing time mentoring team members on areas of expertise to be able to enhance one's knowledge
-                    and that of the team<br>
-                </td>
-                <td>a. No. of trainings attended <br>
-                    b. Ideas and productivity improvements suggested and implemented<br>
-                    c. No. of knowledge sharing sessions attended<br>
-                    d. Time spent on mentoring team members<br>
-                    e. Tranings delivered (person hours)<br>
-                    f. Relevant Certifications acquired and the ability to transfer the knowledge in one's tasks /
-                    deliverables</td>
-                <td>10%</td>
-            </tr>
-            <tr>
-                <td>II. Role excellence - Individual contribution </td>
-                <td>a. Ensuring on time delivery of tasks and modules <br>
-                    b. Ensuring quality output<br>
-                    c. Enhancing personal productivity<br>
-                </td>
-                <td>1.Understanding the requirements of the role and be able to deliver within
-                    the specified timelines and expected quality <br>
-                    2. Ensuring coding and testing standards meet the design specifications accurately <br>
-                    3. On time delivery of modules within the acceptable quality standards<br>
-                    4. Technical documentation<br>
-                    5. Effective reviews</td>
-                <td>a. Productivity measures applicable for the role / project / Productivity
-                    improvements achieved<br>
-                    b. Ideas and process improvements suggested and implemented<br>
-                    c. Lines of code<br>
-                    d. No. of review comments raised<br>
-                    e. No. of bugs detected<br>
-                    f. No. of bugs fixed<br>
-                    g. Schedule variance<br>
-                    h. Effort variance<br>
-                    i. Effort saved through re-usability and usage of KM portal / project repository<br>
-                    j. No. of defects identified post unit testing<br>
-                    k. Defect injection rate<br>
-                    l. Defects Density Ratio<br>
-                    m. No. of delivered defects<br>
-                    n. Customer feedback / C-SAT rating</td>
-                <td>40%</td>
-            </tr>
-            <tr>
-                <td>III. Role excellence - Technological Guidance</td>
-                <td>1. Ensuring quality output from the team <br>
-                    2. Enhancing the technology prowess of the project and ensuring risk-free execution<br>
-                    3. Enhancing C-SAT<br>
-                    4. Building team competence</td>
-                <td>&nbsp;1. Identifying appropriate tasks and metrics for team members to help
-                    them manage their peformance and contribution to the project effectively<br>
-                    2. Encouraging use of KM repository for enhancing quality / productivity <br>
-                    3. Encouraging resuability and contributing to reusability<br>
-                    4. Mentoring team in delivering error-free output<br>
-                    5. Helping team members in tracking metrics and reporting per the standards defined<br>
-                    6. Helping team understand, appreciate and adhere to necessary processes, standards and
-                    templates<br>
-                    7. Mentoring the team to bridge the competency gaps of individual team members as appropriate</td>
-                <td>a. Usage of the KM repositories<br>
-                    b. Productivity improvements achieved<br>
-                    c. Contributions made to the KM repositories <br>
-                    d. Process improvements achieved<br>
-                    e. Audit observations and NCs that can be attributed to process non-compliance at the module level
-                </td>
-                <td>35%</td>
-            </tr>
-            <tr>
-                <td>IV. Project / Process / organizational excellence</td>
-                <td>1. Project performance enhancement<br>
-                    <br>
-                    2. Process improvements achieved; <br>
-                    <br>
-                    3. Work products delivered are accurate, upto the standards and specifications defined for the
-                    project / customer / orgn.
-                </td>
-                <td>1. Contribution towards process improvements at the project level and org.
-                    level w.r.t technical standards and POCs<br>
-                    2. Usage of Marlabs KM repository to demonstrate productivity improvements<br>
-                    3. Contributing towards knowledge assets in the form of papers, best practices, improved
-                    processes<br>
-                    4. Paricipating in the competency development initiatives at the org. level through delivery of
-                    trainings, contributing to knowledge assets such as case studies, ideas for process / productivity
-                    enhancements, presenting papers, etc.<br>
-                    5. Adherence to project practices, standards, specifications, etc. at the team level. <br>
-                </td>
-                <td>a. Usage of the KM repositories<br>
-                    b. Productivity improvements achieved<br>
-                    c. Contributions made to the KM repositories <br>
-                    d. Process improvements achieved<br>
-                    e. Audit observations and NCs that can be attributed to process non-compliance by the role-holder
-                </td>
-                <td>15%</td>
-            </tr>
-        </tbody> -->
-    </table>
 </div>
